@@ -1,0 +1,132 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "angeline",
+  "name": "Angeline Panjaya",
+  "password": "angeline"
+}
+
+### Login
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "angeline",
+  "password": "angeline"
+}
+
+### Get User
+GET http://localhost:3000/api/users/current
+Accept: application/json
+Authorization: ff5d432c-8ebb-4e66-80b3-6f17a90474d2
+
+### Logout User
+DELETE http://localhost:3000/api/users/current
+Accept: application/json
+Authorization: ef47368-cb5a-42fd-9ea4-f316da847b2e
+
+### Update User
+PATCH http://localhost:3000/api/users/current
+Accept: application/json
+Content-Type: application/json
+Authorization: 40e23743-5c24-4cea-a50e-9386abf14942
+
+{
+  "password" : "angeline"
+}
+
+### Create contact
+POST http://localhost:3000/api/contacts
+Accept: application/json
+Content-Type: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
+
+{
+  "first_name" : "Iin",
+  "last_name" : "An",
+  "email" : "iian@example.com",
+  "phone" : "0899999999"
+}
+
+### Update contact
+PUT http://localhost:3000/api/contacts/829
+Accept: application/json
+Content-Type: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
+
+{
+  "first_name" : "Irene",
+  "last_name" : "Ste",
+  "email" : "IreSte@example.com",
+  "phone" : "0899999999"
+}
+
+### Get contact
+GET http://localhost:3000/api/contacts
+Accept: application/json
+Content-Type: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
+
+### Delete contact
+DELETE http://localhost:3000/api/contacts/1
+Accept: application/json
+Content-Type: application/json
+Authorization: ff5d432c-8ebb-4e66-80b3-6f17a90474d2
+
+### Search contact
+GET http://localhost:3000/api/contacts?size=2&page=2
+Accept: application/json
+Content-Type: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
+
+### Search contact by name
+GET http://localhost:3000/api/contacts?name=Grace
+Accept: application/json
+Content-Type: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
+
+### Create address
+POST http://localhost:3000/api/contacts/824/addresses
+Accept: application/json
+Content-Type: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
+
+{
+  "street" : "cemara",
+  "city" : "medan",
+  "province" : "sumatera utara",
+  "postal_code": "123435",
+  "country" : "indonesia"
+}
+
+### Get address
+GET http://localhost:3000/api/contacts/830/addresses/407
+Accept: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
+
+### List address
+GET http://localhost:3000/api/contacts/824/addresses
+Accept: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
+
+### Update address
+PUT http://localhost:3000/api/contacts/830/addresses/407
+Accept: application/json
+Content-Type: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
+
+{
+  "street" : "jw mariot hotel",
+  "city" : "medan",
+  "province" : "sumatera utara",
+  "postal_code": "12345",
+  "country" : "indonesia"
+}
+
+### Delete address
+DELETE http://localhost:3000/api/contacts/824/addresses/408
+Accept: application/json
+Authorization: 779fafb7-bd41-4f69-8bbf-a4254ad4780e
